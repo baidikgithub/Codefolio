@@ -1,0 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #0c0c1d !important;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Ant Design component overrides for dark theme */
+.ant-typography {
+  color: #fff !important;
+}
+
+.ant-divider {
+  border-color: #333 !important;
+}
+
+.ant-layout {
+  background: #0c0c1d !important;
+}
+
+.ant-layout-content {
+  background: #0c0c1d !important;
+}
+
+.ant-layout-footer {
+  background: #0c0c1d !important;
+}
+
+/* Navigation link hover effects */
+.nav-link:hover {
+  color: #1890ff !important;
+}
+
+/* Scrollbar styling for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c1d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Ensure no white spaces anywhere */
+body * {
+  box-sizing: border-box;
+}
+
+/* Remove any default backgrounds that might show white */
+.ant-row, .ant-col {
+  background: transparent !important;
+}
