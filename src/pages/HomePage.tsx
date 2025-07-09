@@ -11,6 +11,7 @@ import { Avatar } from 'antd';
 import { LinkedinOutlined, GithubOutlined, MailOutlined, TwitterOutlined, InstagramOutlined, BehanceOutlined, DribbbleOutlined, PhoneOutlined, GitlabOutlined, DiscordOutlined } from '@ant-design/icons';
 import '../styles/components/styles.css';
 import { experienceData } from '../data/experience';
+import ThreeJSBackground from '../components/ThreeJSBackground';
 // import { container, item } from '../components/SkillCard/SkillCard';
 
 const { Title, Paragraph, Text } = Typography;
@@ -251,28 +252,24 @@ const SinglePage: React.FC = () => {
       {/* HOME SECTION */}
       <section id="home" style={{ 
         minHeight: '100vh', 
-        display: 'flex', 
-        alignItems: 'center',
-        background: '#0c0c1d',
         position: 'relative',
         zIndex: 1,
       }}>
-
-        <ProfileIntro
-          name="Baidik Mazumdar"
-          titlePrefix="I am a"
-          typingWords={["Web Designer", "Frontend Developer", "Backend Developer", "Visionary"]}
-          description="Pursuing Master of Computer Application at Sikkim Manipal Institute of Technology, with a strong passion for both frontend and backend technologies. I am eager to apply my knowledge in modern frameworks, API integration, and database management."
-          buttonText="Check CV"
-          secondButtonText="Github"
-          onSecondButtonClick={() => handleSocialClick('https://github.com/baidikgithub')}
-          onButtonClick={() => alert('CV button clicked')}
-          imageUrl="src/assets//profile.jpg"
-        />
+        <ThreeJSBackground>
+          <ProfileIntro
+            name="Baidik Mazumdar"
+            titlePrefix="I am a"
+            typingWords={["Web Designer", "Frontend Developer", "Backend Developer", "Visionary"]}
+            description="Pursuing Master of Computer Application at Sikkim Manipal Institute of Technology, with a strong passion for both frontend and backend technologies. I am eager to apply my knowledge in modern frameworks, API integration, and database management."
+            buttonText="Check CV"
+            secondButtonText="Github"
+            onSecondButtonClick={() => handleSocialClick('https://github.com/baidikgithub')}
+            onButtonClick={() => alert('CV button clicked')}
+            imageUrl="src/assets//profile.jpg"
+          />
+        </ThreeJSBackground>
       </section>
 
-
-      <Divider style={{ margin: 0, borderColor: '#333', backgroundColor: '#0c0c1d' }} />
 
       {/* PROJECTS SECTION */}
       <section id="projects" style={{ 
@@ -286,16 +283,16 @@ const SinglePage: React.FC = () => {
         zIndex: 1,
       }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "Poppins, sans-serif", color: "#fff" }}>
+          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff" , fontSize: isMobile ? '20px' : '33px'}}>
             Projects
           </Title>
           <Text
             type="secondary"
             style={{ 
-              fontFamily: "Poppins, sans-serif", 
+              fontFamily: "EB Garamond, serif", 
               color: "#ccc", 
               display: "block",
-              fontSize: isMobile ? '14px' : '16px'
+              fontSize: isMobile ? '14px' : '21px'
             }}
           >
             Here are some of the projects I've worked on, showcasing my skills and experience.
@@ -325,16 +322,16 @@ const SinglePage: React.FC = () => {
         zIndex: 1,
       }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "Poppins, sans-serif", color: "#fff" }}>
+          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff", fontSize: isMobile ? '20px' : '33px' }}>
             Experience
           </Title>
           <Text
             type="secondary"
             style={{ 
-              fontFamily: "Poppins, sans-serif", 
+              fontFamily: "EB Garamond, serif", 
               color: "#ccc", 
               display: "block",
-              fontSize: isMobile ? '14px' : '16px'
+              fontSize: isMobile ? '14px' : '21px'
             }}
           >
             My professional journey has been a path of continuous learning and growth.
@@ -361,16 +358,16 @@ const SinglePage: React.FC = () => {
         zIndex: 1,
       }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "Poppins, sans-serif", color: "#fff" }}>
+          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff", fontSize: isMobile ? '20px' : '33px' }}>
             Skills
           </Title>
           <Text
             type="secondary"
             style={{ 
-              fontFamily: "Poppins, sans-serif", 
+              fontFamily: "EB Garamond, serif", 
               color: "#ccc", 
               display: "block",
-              fontSize: isMobile ? '14px' : '16px'
+              fontSize: isMobile ? '14px' : '21px'
             }}
           >
             Here are some of my skills on which I have been working on.
@@ -388,10 +385,10 @@ const SinglePage: React.FC = () => {
             >
               <Title level={isMobile ? 4 : 3} style={{ 
                 color: '#fff', 
-                fontFamily: 'Poppins, sans-serif',
+                fontFamily: 'EB Garamond, serif',
                 marginBottom: '30px',
                 textAlign: 'center',
-                fontSize: isMobile ? '20px' : '24px'
+                fontSize: isMobile ? '22px' : '28px'
               }}>
                 {category.name}
               </Title>
@@ -433,16 +430,16 @@ const SinglePage: React.FC = () => {
         zIndex: 1,
       }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "Poppins, sans-serif", color: "#fff" }}>
+          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff", fontSize: isMobile ? '20px' : '33px' }}>
             Education
           </Title>
           <Text
             type="secondary"
             style={{ 
-              fontFamily: "Poppins, sans-serif", 
+              fontFamily: "EB Garamond, serif", 
               color: "#ccc", 
               display: "block",
-              fontSize: isMobile ? '14px' : '16px'
+              fontSize: isMobile ? '14px' : '21px'
             }}
           >
             My educational journey has been a path of personal growth and self-exploration.
@@ -492,8 +489,8 @@ const SinglePage: React.FC = () => {
                 <Text
                   style={{
                     color: "#fff",
-                    fontSize: isMobile ? 10 : 12,
-                    fontFamily: "Poppins, sans-serif",
+                    fontSize: isMobile ? 12 : 16,
+                    fontFamily: "EB Garamond, serif",
                     textAlign: "center",
                   }}
                 >
@@ -527,16 +524,16 @@ const SinglePage: React.FC = () => {
         zIndex: 1,
       }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "Poppins, sans-serif", color: "#fff" }}>
+          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff", fontSize: isMobile ? '20px' : '33px' }}>
             Get In Touch
           </Title>
           <Text
             type="secondary"
             style={{ 
-              fontFamily: "Poppins, sans-serif", 
+              fontFamily: "EB Garamond, serif", 
               color: "#ccc", 
               display: "block",
-              fontSize: isMobile ? '14px' : '16px'
+              fontSize: isMobile ? '14px' : '21px'
             }}
           >
             Feel free to reach out for collaborations or just a friendly hello
@@ -566,7 +563,7 @@ const SinglePage: React.FC = () => {
               >
                 <Form.Item
                   name="name"
-                  label={<span style={{ color: '#fff', fontFamily: 'Poppins, sans-serif' }}>Name</span>}
+                  label={<span style={{ color: '#fff', fontFamily: 'EB Garamond, serif' }}>Name</span>}
                   rules={[{ required: true, message: 'Please enter your name!' }]}
                 >
                   <Input 
@@ -583,7 +580,7 @@ const SinglePage: React.FC = () => {
 
                 <Form.Item
                   name="email"
-                  label={<span style={{ color: '#fff', fontFamily: 'Poppins, sans-serif' }}>Email</span>}
+                  label={<span style={{ color: '#fff', fontFamily: 'EB Garamond, serif' }}>Email</span>}
                   rules={[
                     { required: true, message: 'Please enter your email!' },
                     { type: 'email', message: 'Please enter a valid email!' }
@@ -603,7 +600,7 @@ const SinglePage: React.FC = () => {
 
                 <Form.Item
                   name="subject"
-                  label={<span style={{ color: '#fff', fontFamily: 'Poppins, sans-serif' }}>Subject</span>}
+                  label={<span style={{ color: '#fff', fontFamily: 'EB Garamond, serif' }}>Subject</span>}
                   rules={[{ required: true, message: 'Please enter a subject!' }]}
                 >
                   <Input 
@@ -620,7 +617,7 @@ const SinglePage: React.FC = () => {
 
                 <Form.Item
                   name="message"
-                  label={<span style={{ color: '#fff', fontFamily: 'Poppins, sans-serif' }}>Message</span>}
+                  label={<span style={{ color: '#fff', fontFamily: 'EB Garamond, serif' }}>Message</span>}
                   rules={[{ required: true, message: 'Please enter your message!' }]}
                 >
                   <TextArea 
@@ -647,9 +644,9 @@ const SinglePage: React.FC = () => {
                       background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                       border: 'none',
                       borderRadius: '8px',
-                      fontFamily: 'Poppins, sans-serif',
+                      fontFamily: 'EB Garamond, serif',
                       fontWeight: '600',
-                      fontSize: isMobile ? '14px' : '16px'
+                      fontSize: isMobile ? '14px' : '18px'
                     }}
                   >
                     Send Message
@@ -669,19 +666,19 @@ const SinglePage: React.FC = () => {
               style={{ padding: isMobile ? '24px' : '32px' }}
             >
               <div style={{ marginBottom: '40px' }}>
-                <Title level={isMobile ? 4 : 3} style={{ color: '#fff', fontFamily: 'Poppins, sans-serif', marginBottom: '16px' }}>
+                <Title level={isMobile ? 4 : 3} style={{ color: '#fff', fontFamily: 'EB Garamond, serif', marginBottom: '16px', fontSize: isMobile ? '18px' : '24px' }}>
                   Let's Connect
                 </Title>
-                <Paragraph style={{ color: '#ccc', fontSize: isMobile ? '14px' : '16px', lineHeight: '1.6' }}>
+                <Paragraph style={{ color: '#ccc', fontSize: isMobile ? '14px' : '18px', lineHeight: '1.6' }}>
                   I'm always interested in hearing about new opportunities, interesting projects, or just having a chat about technology and development.
                 </Paragraph>
               </div>
 
               <div style={{ marginBottom: '40px' }}>
-                <Title level={isMobile ? 5 : 4} style={{ color: '#fff', fontFamily: 'Poppins, sans-serif', marginBottom: '20px' }}>
+                <Title level={isMobile ? 5 : 4} style={{ color: '#fff', fontFamily: 'EB Garamond, serif', marginBottom: '20px', fontSize: isMobile ? '16px' : '20px' }}>
                   Contact Information
                 </Title>
-                <div style={{ color: '#ccc', fontSize: isMobile ? '14px' : '16px', lineHeight: '2' }}>
+                <div style={{ color: '#ccc', fontSize: isMobile ? '14px' : '18px', lineHeight: '2' }}>
                   <div style={{ marginBottom: '12px' }}>
                     <MailOutlined style={{ marginRight: '12px', color: '#ea4335' }} />
                     baidikmazumdar789@gmail.com
@@ -698,7 +695,7 @@ const SinglePage: React.FC = () => {
               </div>
 
               <div>
-                <Title level={isMobile ? 5 : 4} style={{ color: '#fff', fontFamily: 'Poppins, sans-serif', marginBottom: '20px' }}>
+                <Title level={isMobile ? 5 : 4} style={{ color: '#fff', fontFamily: 'EB Garamond, serif', marginBottom: '20px', fontSize: isMobile ? '16px' : '20px' }}>
                   Follow Me
                 </Title>
                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: isMobile ? 'center' : 'flex-start' }}>

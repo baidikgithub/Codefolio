@@ -102,7 +102,7 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
             style={{ 
               fontWeight: 'bold', 
               margin: 0, 
-              fontFamily: 'Poppins, sans-serif',
+              fontFamily: 'EB Garamond, serif',
               textAlign: isMobile ? 'center' : 'left',
               fontSize: isMobile ? '28px' : '48px'
             }}
@@ -113,20 +113,20 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
             level={isMobile ? 4 : 3} 
             style={{ 
               marginTop: 8, 
-              fontFamily: 'Poppins, sans-serif',
+              fontFamily: 'EB Garamond, serif',
               textAlign: isMobile ? 'center' : 'left',
               fontSize: isMobile ? '16px' : '24px'
             }}
           >
             {titlePrefix}{' '}
-            <Text strong style={{ color: '#1890ff', fontFamily: 'Poppins, sans-serif' }}>{displayText}</Text>
-            <span style={{ color: '#1890ff', fontFamily: 'Poppins, sans-serif' }}>|</span>
+            <Text strong style={{ color: '#1890ff', fontFamily: 'EB Garamond, serif', fontSize: isMobile ? 14 : 21 }}>{displayText}</Text>
+            <span style={{ color: '#1890ff', fontFamily: 'EB Garamond, serif', fontSize: isMobile ? 14 : 21 }}>|</span>
           </Title>
           <Paragraph 
             style={{ 
               maxWidth: 600, 
-              fontFamily: 'Poppins, sans-serif', 
-              fontSize: isMobile ? 14 : 16,
+              fontFamily: 'EB Garamond, serif', 
+              fontSize: isMobile ? 14 : 21,
               textAlign: isMobile ? 'center' : 'left',
               margin: isMobile ? '20px auto' : '20px 0'
             }}
@@ -144,7 +144,7 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
               shape="round"
               size={isMobile ? "middle" : "large"}
               style={{
-                fontFamily: 'Poppins, sans-serif',
+                fontFamily: 'EB Garamond, serif',
                 borderColor: 'cyan',
                 borderWidth: 2,
                 boxShadow: '0 0 5px magenta',
@@ -160,7 +160,7 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
               shape="round"
               size={isMobile ? "middle" : "large"}
               style={{
-                fontFamily: 'Poppins, sans-serif',
+                fontFamily: 'EB Garamond, serif',
                 borderColor: 'orange',
                 borderWidth: 2,
                 boxShadow: '0 0 5px orange',

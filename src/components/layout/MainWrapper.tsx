@@ -91,11 +91,12 @@ const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
     <Layout style={{ background: "#0c0c1d", minHeight: "100vh" }}>
       <Header
         style={{
-          background: "rgba(12, 12, 29, 0.95)",
-          backdropFilter: "blur(15px)",
+          // background: "rgba(12, 12, 29, 0.95)",
+          background: "transparent",
+          // backdropFilter: "blur(15px)",
           paddingInline: isMobile ? "20px" : "40px",
           fontFamily: "Poppins, sans-serif",
-          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
+          // boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
           position: "fixed",
           zIndex: 1000,
           width: isMobile ? "100%" : "70%",

@@ -82,7 +82,7 @@ export const EducationCard: FC<EducationCardProps> = ({
           >
             {degree}
           </Text>
-          <br />
+          {/* <br /> */}
           {/* <Text style={{ color: "#888", fontSize: 13 }}>{duration}</Text> */}
         </div>
       </Space>
@@ -101,7 +101,7 @@ export const EducationCard: FC<EducationCardProps> = ({
         <Paragraph style={{ 
           color: "#ccc", 
           marginTop: isMobile ? 8 : 12, 
-          fontSize: isMobile ? 12 : 14,
+          fontSize: isMobile ? 12 : 21,
           lineHeight: isMobile ? '1.4' : '1.6'
         }}>
           {description}

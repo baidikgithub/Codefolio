@@ -55,7 +55,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
             style={{ 
               color: '#fff', 
               marginBottom: 4, 
-              fontFamily: 'Poppins, sans-serif',
+              fontFamily: 'EB Garamond, serif',
               fontSize: isMobile ? '16px' : '18px'
             }}
           >
@@ -96,7 +96,7 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
 
         <Paragraph style={{ 
           color: '#ddd', 
-          fontSize: isMobile ? 13 : 15, 
+          fontSize: isMobile ? 13 : 21, 
           lineHeight: 1.6, 
           marginBottom: 16 
         }}>
