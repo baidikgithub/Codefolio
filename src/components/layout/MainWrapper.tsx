@@ -1,9 +1,11 @@
-import React, { type ReactNode, useEffect } from "react";
-import { Col, Layout, Row } from "antd";
+import React, { type ReactNode, useEffect, useState } from "react";
+import { Col, Layout, Row, Button, Drawer } from "antd";
 import AppFooter from "./Footer";
 import { Header } from "antd/es/layout/layout";
 import ScrollReveal from "scrollreveal";
 import { Link } from "react-scroll";
+import { MenuOutlined } from "@ant-design/icons";
+// import Image from "../../assets/logos/portfolio_logo.png";
 
 const { Content, Footer } = Layout;
 
@@ -12,6 +14,9 @@ type MainWrapperProps = {
 };
 
 const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     const sr = ScrollReveal();
     sr.reveal(".reveal", {
@@ -23,7 +28,64 @@ const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
       distance: "20px",
       origin: "bottom",
     });
+
+    // Check if device is mobile
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  const navLinks = [
+    { to: "home", label: "HOME" },
+    { to: "projects", label: "PROJECTS" },
+    { to: "experience", label: "EXPERIENCE" },
+    { to: "skills", label: "SKILLS" },
+    { to: "education", label: "EDUCATION" },
+    { to: "contact", label: "CONTACT" },
+  ];
+
+  const handleNavClick = (to: string) => {
+    setMobileMenuOpen(false);
+  };
+
+  const NavLinks = () => (
+    <div style={{ 
+      display: "flex", 
+      gap: isMobile ? "0" : "20px", 
+      fontWeight: 500,
+      flexDirection: isMobile ? "column" : "row",
+      alignItems: isMobile ? "flex-start" : "center"
+    }}>
+      {navLinks.map((link) => (
+        <Link 
+          key={link.to}
+          to={link.to} 
+          smooth 
+          duration={500} 
+          offset={-80} 
+          style={{ 
+            cursor: "pointer", 
+            color: "#fff",
+            textDecoration: "none",
+            transition: "color 0.3s ease",
+            padding: isMobile ? "16px 0" : "0",
+            fontSize: isMobile ? "18px" : "14px",
+            borderBottom: isMobile ? "1px solid rgba(255,255,255,0.1)" : "none",
+            width: isMobile ? "100%" : "auto"
+          }}
+          className="nav-link"
+          onClick={() => handleNavClick(link.to)}
+        >
+          {link.label}
+        </Link>
+      ))}
+    </div>
+  );
 
   return (
     <Layout style={{ background: "#0c0c1d", minHeight: "100vh" }}>
@@ -31,100 +93,78 @@ const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
         style={{
           background: "rgba(12, 12, 29, 0.95)",
           backdropFilter: "blur(15px)",
-          paddingInline: "40px",
+          paddingInline: isMobile ? "20px" : "40px",
           fontFamily: "Poppins, sans-serif",
           boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
           position: "fixed",
           zIndex: 1000,
-          width: "100%",
-          borderBottom: "1px solid #333",
+          width: isMobile ? "100%" : "70%",
+          right: isMobile ? "0" : "0",
+          height: isMobile ? "60px" : "64px",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         <Row align="middle" justify="space-between" style={{ width: "100%" }}>
-          <Col>{/* Logo Here */}</Col>
           <Col>
-            <div style={{ display: "flex", gap: "20px", fontWeight: 500 }}>
-              <Link 
-                to="home" 
-                smooth 
-                duration={500} 
-                offset={-80} 
-                style={{ 
-                  cursor: "pointer", 
+            {/* Logo can be added here */}
+          </Col>
+          <Col>
+            {isMobile ? (
+              <Button
+                type="text"
+                icon={<MenuOutlined />}
+                onClick={() => setMobileMenuOpen(true)}
+                style={{
                   color: "#fff",
-                  textDecoration: "none",
-                  transition: "color 0.3s ease",
+                  fontSize: "20px",
+                  height: "40px",
+                  width: "40px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center"
                 }}
-                className="nav-link"
-              >
-                HOME
-              </Link>
-              <Link 
-                to="about" 
-                smooth 
-                duration={500} 
-                offset={-80} 
-                style={{ 
-                  cursor: "pointer", 
-                  color: "#fff",
-                  textDecoration: "none",
-                  transition: "color 0.3s ease",
-                }}
-                className="nav-link"
-              >
-                ABOUT ME
-              </Link>
-              <Link 
-                to="projects" 
-                smooth 
-                duration={500} 
-                offset={-80} 
-                style={{ 
-                  cursor: "pointer", 
-                  color: "#fff",
-                  textDecoration: "none",
-                  transition: "color 0.3s ease",
-                }}
-                className="nav-link"
-              >
-                PROJECTS
-              </Link>
-              <Link 
-                to="experience" 
-                smooth 
-                duration={500} 
-                offset={-80} 
-                style={{ 
-                  cursor: "pointer", 
-                  color: "#fff",
-                  textDecoration: "none",
-                  transition: "color 0.3s ease",
-                }}
-                className="nav-link"
-              >
-                EXPERIENCE
-              </Link>
-              <Link 
-                to="skills" 
-                smooth 
-                duration={500} 
-                offset={-80} 
-                style={{ 
-                  cursor: "pointer", 
-                  color: "#fff",
-                  textDecoration: "none",
-                  transition: "color 0.3s ease",
-                }}
-                className="nav-link"
-              >
-                SKILLS
-              </Link>
-            </div>
+              />
+            ) : (
+              <NavLinks />
+            )}
           </Col>
         </Row>
       </Header>
 
-      <Layout style={{ paddingTop: "64px", background: "#0c0c1d" }}>
+      {/* Mobile Drawer */}
+      <Drawer
+        title="Navigation"
+        placement="right"
+        onClose={() => setMobileMenuOpen(false)}
+        open={mobileMenuOpen}
+        width={280}
+        styles={{
+          body: {
+            background: "rgba(12, 12, 29, 0.98)",
+            color: "#fff"
+          },
+          header: {
+            background: "rgba(12, 12, 29, 0.98)",
+            color: "#fff",
+            borderBottom: "1px solid rgba(255,255,255,0.1)"
+          }
+        }}
+      >
+        <NavLinks />
+      </Drawer>
+
+      <div style={{ 
+        display: isMobile ? "none" : "block",
+        position: "absolute",
+        left: "20px",
+        top: "20px",
+        zIndex: 999
+      }}>
+        <img src="/assets/logos/portfolio_logo.png" alt="Logo" width={150} height={150} />
+      </div>
+
+      <Layout style={{ paddingTop: isMobile ? "60px" : "0px", background: "#0c0c1d" }}>
         <Content style={{ margin: 0, padding: 0, background: "#0c0c1d" }}>
           <div className="reveal" style={{ background: "#0c0c1d" }}>{children}</div>
         </Content>

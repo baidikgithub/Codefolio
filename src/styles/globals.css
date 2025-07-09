@@ -1,3 +1,6 @@
+/* Import EB Garamond font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +14,13 @@ html, body, #root {
   box-sizing: border-box;
   background: #0c0c1d !important;
   color: #fff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'EB Garamond', serif;
 }
 
 /* Ant Design component overrides for dark theme */
 .ant-typography {
   color: #fff !important;
+  font-family: 'EB Garamond', serif !important;
 }
 
 .ant-divider {
@@ -66,4 +70,18 @@ body * {
 /* Remove any default backgrounds that might show white */
 .ant-row, .ant-col {
   background: transparent !important;
+}
+
+/* Global font family override for all components */
+.ant-btn,
+.ant-input,
+.ant-form-item-label > label,
+.ant-card,
+.ant-tag,
+.ant-space,
+.ant-avatar,
+.ant-drawer,
+.ant-drawer-title,
+.ant-drawer-body {
+  font-family: 'EB Garamond', serif !important;
 }
