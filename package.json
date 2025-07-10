@@ -15,6 +15,7 @@
     "@react-three/fiber": "^9.1.4",
     "@types/three": "^0.177.0",
     "antd": "^5.25.4",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^12.17.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

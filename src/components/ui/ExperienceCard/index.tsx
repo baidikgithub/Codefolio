@@ -56,14 +56,15 @@ export const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) =>
               color: '#fff', 
               marginBottom: 4, 
               fontFamily: 'EB Garamond, serif',
-              fontSize: isMobile ? '16px' : '18px'
+              fontSize: isMobile ? '17px' : '20px'
             }}
           >
             {experience.title}
           </Title>
-          <Text style={{ 
+          <Text 
+          style={{ 
             color: '#1890ff', 
-            fontSize: isMobile ? 14 : 16, 
+            fontSize: isMobile ? 15 : 18, 
             fontWeight: 600, 
             fontFamily: 'Poppins, sans-serif' 
           }}>

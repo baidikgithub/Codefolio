@@ -8,7 +8,7 @@ import { educationData } from '../data/education';
 import type { Project } from '../components/ui/ProjectCard';
 import { motion } from 'framer-motion';
 import { Avatar } from 'antd';
-import { LinkedinOutlined, GithubOutlined, MailOutlined, TwitterOutlined, InstagramOutlined, BehanceOutlined, DribbbleOutlined, PhoneOutlined, GitlabOutlined, DiscordOutlined } from '@ant-design/icons';
+import { LinkedinOutlined, GithubOutlined, MailOutlined, TwitterOutlined, InstagramOutlined, BehanceOutlined, DribbbleOutlined, PhoneOutlined, GitlabOutlined, DiscordOutlined, SendOutlined } from '@ant-design/icons';
 import '../styles/components/styles.css';
 import { experienceData } from '../data/experience';
 import ThreeJSBackground from '../components/ThreeJSBackground';
@@ -637,6 +637,7 @@ const SinglePage: React.FC = () => {
                     type="primary"
                     htmlType="submit"
                     size={isMobile ? "middle" : "large"}
+                    icon={<SendOutlined />}
                     style={{
                       width: '100%',
                       height: isMobile ? '40px' : '48px',

@@ -24,15 +24,15 @@ export const educationData = [
       grade: "83.6%",
       logo: "/src/assets/images/ramanuj-clg.png",
       description:
-        "I am currently pursuing a Master's degree in Computer Applications. I have taken courses in Data Structures, Algorithms, Discrete Mathematics, and Object-Oriented Programming.",
+        "Completed Higher Secondary education in the Science stream with a strong foundation in core subjects like Physics, Chemistry, Mathematics, and Biology, fostering analytical thinking and problem-solving skills.",
     },
     {
       institution: "Don Bosco Higher Secondary School",
       degree: "High School",
-      duration: "Feb 2019",
+      duration: "Jan 2018 - Feb 2019",
       grade: "78.5%",
       logo: "/src/assets/images/Don-Bosco.jpeg",
       description:
-        "I am currently pursuing a Master's degree in Computer Applications. I have taken courses in Data Structures, Algorithms, Discrete Mathematics, and Object-Oriented Programming.",
+        "Completed high school education with a focus on foundational subjects including Mathematics, Science, and English.",
     },
   ];

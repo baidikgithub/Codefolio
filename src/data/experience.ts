@@ -12,7 +12,7 @@ export const experienceData = [
     company: "Freelance Developer",
     duration: "Jan 2024 - Present",
     location: "Remote",
-    description: "Working on various client projects including web applications, mobile apps, and API development. Technologies used include React, Node.js, Python, and various databases.",
-    technologies: ["React", "Node.js", "Python", "MongoDB", "PostgreSQL", "TypeScript"]
+    description: "Designed and developed custom websites and web applications for clients.",
+    technologies: ["HTML", "CSS", "JavaScript", "React"]
   }
 ]; 
