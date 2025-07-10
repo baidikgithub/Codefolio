@@ -308,8 +308,7 @@ const SinglePage: React.FC = () => {
         </Row>
       </section>
 
-      <Divider style={{ margin: 0, borderColor: '#333', backgroundColor: '#0c0c1d' }} />
-
+  
       {/* EXPERIENCE SECTION */}
       <section id="experience" style={{ 
         background: '#0c0c1d', 
@@ -344,7 +343,7 @@ const SinglePage: React.FC = () => {
         </div>
       </section>
 
-      <Divider style={{ margin: 0, borderColor: '#333', backgroundColor: '#0c0c1d' }} />
+  
       
       {/* SKILLS SECTION */}
       <section id="skills" style={{ 
@@ -417,7 +416,7 @@ const SinglePage: React.FC = () => {
         </div>
       </section>
 
-      <Divider style={{ margin: 0, borderColor: '#333', backgroundColor: '#0c0c1d' }} />
+
       {/* EDUCATION SECTION */}
       <section id="education" style={{ 
         padding: isMobile ? "60px 5%" : "80px 20px", 

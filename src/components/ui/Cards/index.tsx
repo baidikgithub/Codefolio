@@ -66,7 +66,7 @@ export const EducationCard: FC<EducationCardProps> = ({
             style={{ 
               color: "#fff", 
               marginBottom: 4,
-              fontSize: isMobile ? '16px' : '18px'
+              fontSize: isMobile ? '16px' : '20px'
             }}
           >
             {institution}
@@ -101,7 +101,7 @@ export const EducationCard: FC<EducationCardProps> = ({
         <Paragraph style={{ 
           color: "#ccc", 
           marginTop: isMobile ? 8 : 12, 
-          fontSize: isMobile ? 12 : 21,
+          fontSize: isMobile ? 12 : 16,
           lineHeight: isMobile ? '1.4' : '1.6'
         }}>
           {description}

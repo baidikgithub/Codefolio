@@ -6,7 +6,7 @@ export const educationData = [
       grade: "9.38 CGPA",
       logo: "/src/assets/images/Manipal_University_logo.png",
       description:
-        "I am currently pursuing a Master's degree in Computer Applications. I have taken courses in Data Structures, Algorithms, Discrete Mathematics, and Object-Oriented Programming.",
+        "Pursuing my MCA while strengthening core development skills, with a passion for full-stack web development, backend APIs, and writing clean, efficient code through hands-on projects and real-world problem solving.",
     },
     {
       institution: "Assam Down Town University",
@@ -15,7 +15,7 @@ export const educationData = [
       grade: "9.38 CGPA",
       logo: "/src/assets/images/Assam-Down-Town-University.png",
       description:
-        "I am currently pursuing a Master's degree in Computer Applications. I have taken courses in Data Structures, Algorithms, Discrete Mathematics, and Object-Oriented Programming.",
+        "Completed my BSc in Biotechnology with practical experience in life sciences, including a research project on valorising vegetable waste as an alternative culture medium for bacterial growth.",
     },
     {
       institution: "Ramanuj Gupta Senior Secondary School",
