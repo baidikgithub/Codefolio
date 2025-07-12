@@ -75,20 +75,6 @@ const PortfolioPage: React.FC = () => {
           textAlign: "center",
         }}
       >
-        <Text style={{ color: "#666", fontSize: 14 }}>
-          Click anywhere to skip
-        </Text>
-        <motion.div
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity }}
-          style={{
-            marginTop: "10px",
-            color: "#666",
-            fontSize: "20px",
-          }}
-        >
-          ↓
-        </motion.div>
       </motion.div>
     </div>
   );
