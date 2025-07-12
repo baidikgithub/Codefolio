@@ -79,16 +79,16 @@ const socialLinks = [
 // Projects data
 const projects: Project[] = [
   {
-    title: 'Space Rover',
+    title: 'Space',
     date: 'May 2024',
     image: '', 
-    tags: ['Power Electronics', 'Arduino', 'Autonomous Navigation', 'Jetson Nano'],
+    tags: ['Power'],
     description:
       'Designed and implemented a robust software and electronics system for an autonomous space rover using advanced microcontrollers and embedded systems.',
     link: '#',
   },
   {
-    title: 'Incandescence–2024 Website',
+    title: ' Website',
     date: 'Feb 2024',
     image: '',
     tags: ['NextJS', 'SASS', 'FramerMotion', 'NodeJS', 'MongoDB'],
@@ -97,7 +97,7 @@ const projects: Project[] = [
     link: '#',
   },
   {
-    title: 'MovieZone App',
+    title: ' App',
     date: 'Mar 2025',
     image: '',
     tags: ['ReactNative', 'Expo', 'Appwrite'],
