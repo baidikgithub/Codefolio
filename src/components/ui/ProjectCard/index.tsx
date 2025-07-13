@@ -45,7 +45,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         hoverable
         onClick={handleCardClick}
         style={{
-          backgroundColor: '#111827',
+          backgroundColor: '#0c0c1d',
           color: '#fff',
           borderRadius: 16,
           overflow: 'hidden',
@@ -127,7 +127,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         centered
         styles={{
           body: {
-            backgroundColor: '#111827',
+            backgroundColor: '#0c0c1d',
             color: '#fff',
             borderRadius: 16,
             padding: isMobile ? 20 : 24,
@@ -136,11 +136,32 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             backgroundColor: 'rgba(0, 0, 0, 0.8)',
           },
           content: {
-            backgroundColor: '#111827',
+            backgroundColor: '#0c0c1d',
             borderRadius: 16,
             border: '1px solid rgba(255, 255, 255, 0.1)',
+          },
+          header: {
+            backgroundColor: '#0c0c1d',
+            borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
           }
         }}
+        closeIcon={
+          <div style={{
+            color: '#000',
+            backgroundColor: '#fff',
+            borderRadius: '4px',
+            border: '1px solid #d9d9d9',
+            width: '24px',
+            height: '24px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontSize: '12px',
+            cursor: 'pointer'
+          }}>
+            ✕
+          </div>
+        }
       >
         <div style={{ textAlign: 'center' }}>
           <img

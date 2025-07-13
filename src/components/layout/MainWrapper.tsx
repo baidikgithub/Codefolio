@@ -70,6 +70,7 @@ const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
           offset={-80} 
           style={{ 
             cursor: "pointer", 
+            position: "relative",
             color: "#fff",
             textDecoration: "none",
             transition: "color 0.3s ease",
@@ -91,19 +92,21 @@ const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
     <Layout style={{ background: "#0c0c1d", minHeight: "100vh" }}>
       <Header
         style={{
-          // background: "rgba(12, 12, 29, 0.95)",
-          background: "transparent",
-          // backdropFilter: "blur(15px)",
+          background: "#0c0c1d",
+          backdropFilter: "blur(10px)",
           paddingInline: isMobile ? "20px" : "40px",
           fontFamily: "Poppins, sans-serif",
-          // boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
+          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.3)",
           position: "fixed",
+          top: 0,
+          left: 0,
+          right: 0,
           zIndex: 1000,
-          width: isMobile ? "100%" : "70%",
-          right: isMobile ? "0" : "0",
+          width: "100%",
           height: isMobile ? "60px" : "64px",
           display: "flex",
           alignItems: "center",
+          borderBottom: "1px solid rgba(255, 255, 255, 0.1)",
         }}
       >
         <Row align="middle" justify="space-between" style={{ width: "100%" }}>
@@ -142,11 +145,11 @@ const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
         width={280}
         styles={{
           body: {
-            background: "rgba(12, 12, 29, 0.98)",
+            background: "#0c0c1d",
             color: "#fff"
           },
           header: {
-            background: "rgba(12, 12, 29, 0.98)",
+            background: "#0c0c1d",
             color: "#fff",
             borderBottom: "1px solid rgba(255,255,255,0.1)"
           }
@@ -165,7 +168,7 @@ const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
         <img src="/assets/logos/portfolio_logo.png" alt="Logo" width={150} height={150} />
       </div>
 
-      <Layout style={{ paddingTop: isMobile ? "60px" : "0px", background: "#0c0c1d" }}>
+      <Layout style={{ paddingTop: isMobile ? "60px" : "64px", background: "#0c0c1d" }}>
         <Content style={{ margin: 0, padding: 0, background: "#0c0c1d" }}>
           <div className="reveal" style={{ background: "#0c0c1d" }}>{children}</div>
         </Content>

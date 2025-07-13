@@ -22,10 +22,9 @@ const AppFooter: React.FC = () => {
   return (
     <Footer style={{ 
       textAlign: "center",
-      background: "rgba(12, 12, 29, 0.95)",
-      backdropFilter: "blur(15px)",
+      background: "#0c0c1d",
       color: "#fff",
-      borderTop: "1px solid #333",
+      borderTop: "1px solid rgba(255, 255, 255, 0.1)",
       fontFamily: "Poppins, sans-serif",
       padding: isMobile ? "16px" : "24px",
       fontSize: isMobile ? "12px" : "14px"
