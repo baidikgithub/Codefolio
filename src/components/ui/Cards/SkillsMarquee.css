@@ -1,0 +1,52 @@
+.skills-marquee-outer {
+  overflow: hidden;
+  width: 100%;
+  background: transparent;
+  padding: 1.5rem 0;
+}
+
+.skills-marquee-inner {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 25s linear infinite;
+}
+
+.skill-marquee-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  margin: 0 20px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 18px 12px 10px 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform 0.2s;
+}
+
+.skill-marquee-card:hover {
+  transform: scale(1.07);
+  background: rgba(255,255,255,0.12);
+}
+
+.skill-marquee-icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.skill-marquee-label {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 2px;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+} 
