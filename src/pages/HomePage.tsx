@@ -12,6 +12,7 @@ import { LinkedinOutlined, GithubOutlined, MailOutlined, TwitterOutlined, Instag
 import '../styles/components/styles.css';
 import { experienceData } from '../data/experience';
 import ThreeJSBackground from '../components/ThreeJSBackground';
+import SkillsMarquee from '../components/ui/Cards/SkillsMarquee';
 // import { container, item } from '../components/SkillCard/SkillCard';
 
 const { Title, Paragraph, Text } = Typography;
@@ -269,6 +270,7 @@ const SinglePage: React.FC = () => {
           />
         </ThreeJSBackground>
       </section>
+      <SkillsMarquee />
 
 
   
