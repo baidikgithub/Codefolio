@@ -16,8 +16,8 @@ export const SkillCard: React.FC<SkillCardProps> = ({ category, skills }) => {
   return (
     <Card
       style={{
-        backgroundColor: '#1e293b',
-        border: '1px solid #334155',
+        backgroundColor: '#0c0c1d',
+        border: '1px solid rgba(255, 255, 255, 0.1)',
         color: '#fff',
         borderRadius: 16,
         height: '100%',
@@ -32,9 +32,9 @@ export const SkillCard: React.FC<SkillCardProps> = ({ category, skills }) => {
           <Tag
             key={index}
             style={{
-              backgroundColor: '#0f172a',
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
               color: '#fff',
-              border: '1px solid #475569',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
               borderRadius: 8,
               padding: '4px 12px',
               margin: 2,

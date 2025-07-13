@@ -271,6 +271,42 @@ const SinglePage: React.FC = () => {
       </section>
 
 
+  
+      {/* EXPERIENCE SECTION */}
+      <section id="experience" style={{ 
+        background: '#0c0c1d', 
+        minHeight: '100vh', 
+        padding: isMobile ? '60px 5%' : '80px 10%',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        position: 'relative',
+        zIndex: 1,
+      }}>
+        <div style={{ textAlign: "center", marginBottom: 40 }}>
+          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff", fontSize: isMobile ? '20px' : '33px' }}>
+            Experience
+          </Title>
+          <Text
+            type="secondary"
+            style={{ 
+              fontFamily: "EB Garamond, serif", 
+              color: "#ccc", 
+              display: "block",
+              fontSize: isMobile ? '14px' : '21px'
+            }}
+          >
+            My professional journey has been a path of continuous learning and growth.
+          </Text>
+        </div>
+        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+          {experienceData.map((experience, index) => (
+            <ExperienceCard key={index} experience={experience} />
+          ))}
+        </div>
+      </section>
+
+
       {/* PROJECTS SECTION */}
       <section id="projects" style={{ 
         background: '#0c0c1d', 
@@ -306,41 +342,6 @@ const SinglePage: React.FC = () => {
             </Col>
           ))}
         </Row>
-      </section>
-
-  
-      {/* EXPERIENCE SECTION */}
-      <section id="experience" style={{ 
-        background: '#0c0c1d', 
-        minHeight: '100vh', 
-        padding: isMobile ? '60px 5%' : '80px 10%',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        position: 'relative',
-        zIndex: 1,
-      }}>
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff", fontSize: isMobile ? '20px' : '33px' }}>
-            Experience
-          </Title>
-          <Text
-            type="secondary"
-            style={{ 
-              fontFamily: "EB Garamond, serif", 
-              color: "#ccc", 
-              display: "block",
-              fontSize: isMobile ? '14px' : '21px'
-            }}
-          >
-            My professional journey has been a path of continuous learning and growth.
-          </Text>
-        </div>
-        <div style={{ maxWidth: 800, margin: "0 auto" }}>
-          {experienceData.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
-          ))}
-        </div>
       </section>
 
   

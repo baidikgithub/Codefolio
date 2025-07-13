@@ -125,7 +125,7 @@ const ThreeJSBackground: React.FC<ThreeJSBackgroundProps> = ({ children }) => {
         width: '100%', 
         height: '100%',
         zIndex: 0,
-        background: 'linear-gradient(135deg, #0c0c1d 0%, #1a1a2e 50%, #16213e 100%)'
+        background: '#0c0c1d'
       }}>
         <Canvas
           camera={{ position: [0, 0, 8], fov: 75 }}
