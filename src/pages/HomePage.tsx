@@ -80,31 +80,58 @@ const socialLinks = [
 // Projects data
 const projects: Project[] = [
   {
-    title: 'Space',
-    date: 'May 2024',
-    image: '', 
-    tags: ['Power'],
+    title: 'Portfolio Website',
+    date: 'Dec 2024',
+    image: 'https://images.unsplash.com/photo-1467232004584-a241de8b6a6b?w=800&h=600&fit=crop', 
+    tags: ['React', 'TypeScript', 'Vite', 'Three.js', 'Framer Motion', 'Ant Design'],
     description:
-      'Designed and implemented a robust software and electronics system for an autonomous space rover using advanced microcontrollers and embedded systems.',
-    link: '#',
+      'A modern, responsive portfolio website built with React and TypeScript. Features include 3D background animations using Three.js, smooth page transitions with Framer Motion, and a clean UI with Ant Design components. The site showcases my skills, projects, and experience with an interactive and engaging user experience.',
+    link: 'https://github.com/baidikgithub/portfolio',
   },
   {
-    title: ' Website',
+    title: 'Movie Browsing App',
+    date: 'Mar 2024',
+    image: 'https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800&h=600&fit=crop',
+    tags: ['React Native', 'Expo', 'Appwrite', 'TypeScript', 'Framer Motion'],
+    description:
+      'A React Native movie browsing application built with Expo and Appwrite backend. Features include user authentication, movie search and filtering, favorites system, and real-time data synchronization. The app provides a seamless experience for users to explore trending and upcoming films with a modern, intuitive interface.',
+    link: 'https://github.com/baidikgithub/movie-app',
+  },
+  {
+    title: 'Event Management System',
     date: 'Feb 2024',
-    image: '',
-    tags: ['NextJS', 'SASS', 'FramerMotion', 'NodeJS', 'MongoDB'],
+    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&h=600&fit=crop',
+    tags: ['Next.js', 'Node.js', 'MongoDB', 'Express', 'Tailwind CSS'],
     description:
-      'Collaborated in creating a vibrant event website for Incandescence, showcasing our college\'s spirit and events with animations and a modern UI.',
-    link: '#',
+      'A comprehensive event management system for college events. Features include event creation and management, user registration, real-time updates, and admin dashboard. Built with Next.js for the frontend, Node.js and Express for the backend, and MongoDB for data storage. Includes responsive design and modern UI/UX.',
+    link: 'https://github.com/baidikgithub/event-system',
   },
   {
-    title: ' App',
-    date: 'Mar 2025',
-    image: '',
-    tags: ['ReactNative', 'Expo', 'Appwrite'],
+    title: 'E-commerce Platform',
+    date: 'Jan 2024',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'Redux'],
     description:
-      'A React Native movie browsing app built with Expo and Appwrite, providing users with a seamless way to explore trending and upcoming films.',
-    link: '#',
+      'A full-stack e-commerce platform with features like product catalog, shopping cart, user authentication, payment processing with Stripe, and order management. Built with React frontend, Node.js backend, PostgreSQL database, and Redux for state management. Includes admin panel for product and order management.',
+    link: 'https://github.com/baidikgithub/ecommerce',
+  },
+  {
+    title: 'Task Management App',
+    date: 'Dec 2023',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&h=600&fit=crop',
+    tags: ['React', 'Firebase', 'Material-UI', 'TypeScript', 'PWA'],
+    description:
+      'A Progressive Web App for task management with real-time collaboration features. Built with React, Firebase for backend services, Material-UI for components, and TypeScript for type safety. Features include task creation, assignment, progress tracking, and team collaboration with real-time updates.',
+    link: 'https://github.com/baidikgithub/task-manager',
+  },
+  {
+    title: 'Weather Dashboard',
+    date: 'Nov 2023',
+    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=800&h=600&fit=crop',
+    tags: ['React', 'OpenWeather API', 'Chart.js', 'CSS3', 'Responsive Design'],
+    description:
+      'A weather dashboard application that displays current weather conditions and forecasts. Features include location-based weather data, interactive charts for temperature trends, 7-day forecast, and responsive design. Built with React, integrated with OpenWeather API, and uses Chart.js for data visualization.',
+    link: 'https://github.com/baidikgithub/weather-dashboard',
   },
 ];
 type Skill = {
@@ -276,34 +303,57 @@ const SinglePage: React.FC = () => {
   
       {/* EXPERIENCE SECTION */}
       <section id="experience" style={{ 
-        background: '#0c0c1d', 
+        background: 'linear-gradient(135deg, #0c0c1d 0%, #1a1a2e 100%)', 
         minHeight: '100vh', 
-        padding: isMobile ? '60px 5%' : '80px 10%',
+        padding: isMobile ? '80px 5%' : '100px 10%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         position: 'relative',
         zIndex: 1,
       }}>
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff", fontSize: isMobile ? '20px' : '33px' }}>
-            Experience
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          style={{ textAlign: "center", marginBottom: 60 }}
+        >
+          <Title level={isMobile ? 3 : 2} style={{ 
+            fontFamily: "EB Garamond, serif", 
+            color: "#fff", 
+            fontSize: isMobile ? '24px' : '36px',
+            marginBottom: 16,
+            fontWeight: 600
+          }}>
+            Professional Experience
           </Title>
           <Text
             type="secondary"
             style={{ 
-              fontFamily: "EB Garamond, serif", 
+              fontFamily: "Poppins, sans-serif", 
               color: "#ccc", 
               display: "block",
-              fontSize: isMobile ? '14px' : '21px'
+              fontSize: isMobile ? '16px' : '18px',
+              maxWidth: 600,
+              margin: '0 auto',
+              lineHeight: 1.6
             }}
           >
-            My professional journey has been a path of continuous learning and growth.
+            My professional journey has been a path of continuous learning and growth, where each experience has shaped my skills and perspective.
           </Text>
-        </div>
-        <div style={{ maxWidth: 800, margin: "0 auto" }}>
+        </motion.div>
+        <div style={{ maxWidth: 900, margin: "0 auto" }}>
           {experienceData.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              viewport={{ once: true }}
+            >
+              <ExperienceCard experience={experience} />
+            </motion.div>
           ))}
         </div>
       </section>
@@ -311,39 +361,63 @@ const SinglePage: React.FC = () => {
 
       {/* PROJECTS SECTION */}
       <section id="projects" style={{ 
-        background: '#0c0c1d', 
+        background: 'linear-gradient(135deg, #0c0c1d 0%, #1a1a2e 100%)', 
         minHeight: '100vh', 
-        padding: isMobile ? '60px 5%' : '80px 10%',
+        padding: isMobile ? '80px 5%' : '100px 10%',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         position: 'relative',
         zIndex: 1,
       }}>
-        <div style={{ textAlign: "center", marginBottom: 40 }}>
-          <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff" , fontSize: isMobile ? '20px' : '33px'}}>
-            Projects
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          style={{ textAlign: "center", marginBottom: 60 }}
+        >
+          <Title level={isMobile ? 3 : 2} style={{ 
+            fontFamily: "EB Garamond, serif", 
+            color: "#fff", 
+            fontSize: isMobile ? '24px' : '36px',
+            marginBottom: 16,
+            fontWeight: 600
+          }}>
+            Featured Projects
           </Title>
           <Text
             type="secondary"
             style={{ 
-              fontFamily: "EB Garamond, serif", 
+              fontFamily: "Poppins, sans-serif", 
               color: "#ccc", 
               display: "block",
-              fontSize: isMobile ? '14px' : '21px'
+              fontSize: isMobile ? '16px' : '18px',
+              maxWidth: 700,
+              margin: '0 auto',
+              lineHeight: 1.6
             }}
           >
-            Here are some of the projects I've worked on, showcasing my skills and experience.
+            Here are some of my recent projects that showcase my skills in full-stack development, mobile apps, and modern web technologies.
           </Text>
-        </div>
+        </motion.div>
         
-        <Row gutter={[24, 24]} justify="center">
-          {projects.map((project, index) => (
-            <Col xs={24} sm={12} lg={8} key={index}>
-              <ProjectCard project={project} />
-            </Col>
-          ))}
-        </Row>
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <Row gutter={[32, 32]} justify="center">
+            {projects.map((project, index) => (
+              <Col xs={24} sm={12} lg={8} key={index}>
+                <motion.div
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              </Col>
+            ))}
+          </Row>
+        </div>
       </section>
 
   
