@@ -165,7 +165,7 @@ const MainWrapper: React.FC<MainWrapperProps> = ({ children }) => {
         top: "20px",
         zIndex: 999
       }}>
-        <img src="/assets/logos/portfolio_logo.png" alt="Logo" width={150} height={150} />
+        <img src="/assets/logos/portfolio_logo.png" alt="Logo" width={200} height={200} />
       </div>
 
       <Layout style={{ paddingTop: isMobile ? "60px" : "64px", background: "#0c0c1d" }}>
