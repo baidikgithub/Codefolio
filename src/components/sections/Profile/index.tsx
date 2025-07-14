@@ -87,21 +87,21 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
       >
         {/* Left: Text Content */}
         <Col xs={24} md={12} order={isMobile ? 2 : 1}>
-          <Title 
-            level={isMobile ? 3 : 2} 
-            style={{ 
-              marginBottom: 9, 
+          <Title
+            level={isMobile ? 3 : 2}
+            style={{
+              marginBottom: 9,
               fontFamily: 'Poppins, sans-serif',
               textAlign: isMobile ? 'center' : 'left'
             }}
           >
             Hi, I am
           </Title>
-          <Title 
-            level={isMobile ? 2 : 1} 
-            style={{ 
-              fontWeight: 'bold', 
-              margin: 0, 
+          <Title
+            level={isMobile ? 2 : 1}
+            style={{
+              fontWeight: 'bold',
+              margin: 0,
               fontFamily: 'EB Garamond, serif',
               textAlign: isMobile ? 'center' : 'left',
               fontSize: isMobile ? '28px' : '48px'
@@ -109,10 +109,10 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
           >
             {name}
           </Title>
-          <Title 
-            level={isMobile ? 4 : 3} 
-            style={{ 
-              marginTop: 8, 
+          <Title
+            level={isMobile ? 4 : 3}
+            style={{
+              marginTop: 8,
               fontFamily: 'EB Garamond, serif',
               textAlign: isMobile ? 'center' : 'left',
               fontSize: isMobile ? '16px' : '24px'
@@ -122,10 +122,10 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
             <Text strong style={{ color: '#1890ff', fontFamily: 'EB Garamond, serif', fontSize: isMobile ? 14 : 21 }}>{displayText}</Text>
             <span style={{ color: '#1890ff', fontFamily: 'EB Garamond, serif', fontSize: isMobile ? 14 : 21 }}>|</span>
           </Title>
-          <Paragraph 
-            style={{ 
-              maxWidth: 600, 
-              fontFamily: 'EB Garamond, serif', 
+          <Paragraph
+            style={{
+              maxWidth: 600,
+              fontFamily: 'EB Garamond, serif',
               fontSize: isMobile ? 14 : 21,
               textAlign: isMobile ? 'center' : 'left',
               margin: isMobile ? '20px auto' : '20px 0'
@@ -133,9 +133,9 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
           >
             {description}
           </Paragraph>
-          <div style={{ 
-            display: 'flex', 
-            gap: '12px', 
+          <div style={{
+            display: 'flex',
+            gap: '16px',
             justifyContent: isMobile ? 'center' : 'flex-start',
             flexWrap: 'wrap'
           }}>
@@ -148,7 +148,10 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
                 borderColor: 'cyan',
                 borderWidth: 2,
                 boxShadow: '0 0 5px magenta',
-                fontSize: isMobile ? '12px' : '14px'
+                fontSize: isMobile ? '16px' : '18px', // increase font size
+                padding: isMobile ? '8px 20px' : '10px 28px', // increase padding
+                height: isMobile ? '40px' : '50px', // increase height
+                minWidth: isMobile ? '120px' : '160px' // increase width if needed
               }}
               onClick={onButtonClick}
             >
@@ -164,7 +167,10 @@ export const ProfileIntro: React.FC<ProfileIntroProps> = ({
                 borderColor: 'orange',
                 borderWidth: 2,
                 boxShadow: '0 0 5px orange',
-                fontSize: isMobile ? '12px' : '14px'
+                fontSize: isMobile ? '16px' : '18px', // increase font size
+                padding: isMobile ? '8px 20px' : '10px 28px', // increase padding
+                height: isMobile ? '40px' : '50px', // increase height
+                minWidth: isMobile ? '120px' : '160px' // increase width if needed'
               }}
               onClick={onSecondButtonClick}
             >
