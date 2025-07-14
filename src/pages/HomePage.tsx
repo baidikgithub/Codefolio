@@ -450,7 +450,7 @@ const SinglePage: React.FC = () => {
 
       {/* CONTACT SECTION */}
       <section id="contact" style={{ 
-        background: '#0c0c1d', 
+        background: 'linear-gradient(135deg, #000000 0%, #0a0a1a 25%, #1a1a2e 50%, #16213e 75%, #0f3460 100%)', 
         minHeight: '100vh', 
         padding: isMobile ? '60px 5%' : '80px 10%',
         display: 'flex',
@@ -458,6 +458,7 @@ const SinglePage: React.FC = () => {
         justifyContent: 'center',
         position: 'relative',
         zIndex: 1,
+        // borderTop: '2px solid rgba(255, 255, 255, 0.1)',
       }}>
         <div style={{ textAlign: "center", marginBottom: 40 }}>
           <Title level={isMobile ? 3 : 2} style={{ fontFamily: "EB Garamond, serif", color: "#fff", fontSize: isMobile ? '20px' : '33px' }}>
@@ -490,11 +491,12 @@ const SinglePage: React.FC = () => {
                 layout="vertical"
                 onFinish={handleFormSubmit}
                 style={{ 
-                  background: 'rgba(255, 255, 255, 0.03)',
+                  background: 'rgba(255, 255, 255, 0.05)',
                   padding: isMobile ? '24px' : '32px',
                   borderRadius: '16px',
-                  border: '1px solid rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(10px)'
+                  border: '1px solid rgba(255, 255, 255, 0.15)',
+                  backdropFilter: 'blur(10px)',
+                  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3)'
                 }}
               >
                 <Form.Item
@@ -505,10 +507,11 @@ const SinglePage: React.FC = () => {
                   <Input 
                     size={isMobile ? "middle" : "large"}
                     style={{
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      border: '1px solid rgba(255, 255, 255, 0.25)',
                       color: '#fff',
-                      borderRadius: '8px'
+                      borderRadius: '8px',
+                      transition: 'all 0.3s ease'
                     }}
                     placeholder="Your name"
                   />
@@ -525,10 +528,11 @@ const SinglePage: React.FC = () => {
                   <Input 
                     size={isMobile ? "middle" : "large"}
                     style={{
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      border: '1px solid rgba(255, 255, 255, 0.25)',
                       color: '#fff',
-                      borderRadius: '8px'
+                      borderRadius: '8px',
+                      transition: 'all 0.3s ease'
                     }}
                     placeholder="your.email@example.com"
                   />
@@ -542,10 +546,11 @@ const SinglePage: React.FC = () => {
                   <Input 
                     size={isMobile ? "middle" : "large"}
                     style={{
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      border: '1px solid rgba(255, 255, 255, 0.25)',
                       color: '#fff',
-                      borderRadius: '8px'
+                      borderRadius: '8px',
+                      transition: 'all 0.3s ease'
                     }}
                     placeholder="What's this about?"
                   />
@@ -559,11 +564,12 @@ const SinglePage: React.FC = () => {
                   <TextArea 
                     rows={isMobile ? 4 : 6}
                     style={{
-                      background: 'rgba(255, 255, 255, 0.05)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                      background: 'rgba(255, 255, 255, 0.08)',
+                      border: '1px solid rgba(255, 255, 255, 0.25)',
                       color: '#fff',
                       borderRadius: '8px',
-                      resize: 'none'
+                      resize: 'none',
+                      transition: 'all 0.3s ease'
                     }}
                     placeholder="Your message here..."
                   />
@@ -583,7 +589,9 @@ const SinglePage: React.FC = () => {
                       borderRadius: '8px',
                       fontFamily: 'EB Garamond, serif',
                       fontWeight: '600',
-                      fontSize: isMobile ? '14px' : '18px'
+                      fontSize: isMobile ? '14px' : '18px',
+                      boxShadow: '0 4px 16px rgba(102, 126, 234, 0.3)',
+                      transition: 'all 0.3s ease'
                     }}
                   >
                     Send Message
@@ -651,14 +659,15 @@ const SinglePage: React.FC = () => {
                           width: isMobile ? '48px' : '56px',
                           height: isMobile ? '48px' : '56px',
                           borderRadius: '50%',
-                          background: 'rgba(255, 255, 255, 0.05)',
-                          border: '1px solid rgba(255, 255, 255, 0.1)',
+                          background: 'rgba(255, 255, 255, 0.08)',
+                          border: '1px solid rgba(255, 255, 255, 0.15)',
                           color: social.color,
                           fontSize: isMobile ? '16px' : '20px',
                           display: 'flex',
                           alignItems: 'center',
                           justifyContent: 'center',
-                          transition: 'all 0.3s ease'
+                          transition: 'all 0.3s ease',
+                          boxShadow: '0 4px 16px rgba(0, 0, 0, 0.2)'
                         }}
                       />
                     </motion.div>
